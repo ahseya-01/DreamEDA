@@ -2,6 +2,7 @@ import Footer from '@/components/Footer';
 import EbookCard from '@/components/EbookCard';
 import { DEMO_PRODUCTS } from '@/lib/demo';
 import logoImage from '@/components/logo.jpeg';
+import RecentEbooks from '@/components/RecenteBooks';
 
 export default function SiteHomePage() {
   return (
@@ -27,6 +28,8 @@ export default function SiteHomePage() {
             Explore our curated collection of high-quality digital reads, quick-learning guides, and creative printables designed to elevate your daily productivity.
           </p>
         </div>
+
+<RecentEbooks />
 
         {/* Second Box: Brand Trust, About & All Detailed Sections in Grid Style */}
         <div className="bg-sky-50 border border-sky-100 rounded-3xl p-8 sm:p-12 w-full max-w-full flex flex-col gap-8">
