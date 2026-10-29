@@ -40,7 +40,7 @@ export default async function Payments({ searchParams }: { searchParams: { saved
       </section>
       <section className="card space-y-2 p-5 text-sm"><h2 className="text-xl font-semibold">Bank and payout setup</h2>
         <p><strong>Not completed.</strong> Your bank account is linked to the payment provider, not to this website. Complete it in Razorpay’s own onboarding. It will ask for business and bank details. You never enter them here.</p>
-        <p>Never share bank passwords, card PINs or OTPs with anyone, including this website. INKDIA never asks for them and does not store financial account details.</p>
+        <p>Never share bank passwords, card PINs or OTPs with anyone, including this website. DreamEDA never asks for them and does not store financial account details.</p>
       </section>
     </div>
   );

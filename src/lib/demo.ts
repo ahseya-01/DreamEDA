@@ -3,7 +3,7 @@ import type { Product } from './types';
 // DEMO products: shown only when the store has no real published ebooks and "demo preview" is on.
 // They are not real, cannot be bought, and never grant downloads.
 const base = {
-  full_description: 'This is a demo product so you can preview the INKDIA design. It is not a real ebook.',
+  full_description: 'This is a demo product so you can preview the DreamEDA design. It is not a real ebook.',
   category_id: null, categories: { name: 'Demo', slug: 'demo' }, language: 'English', page_count: null, file_format: 'PDF',
   table_of_contents: '', benefits: '', audience: '', cover_path: null, preview_paths: [], sample_pdf_path: null,
   pdf_path: null, signature_path: null, ownership_page_path: null, show_signature: false,

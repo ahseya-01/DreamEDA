@@ -1,7 +1,7 @@
 import Footer from '@/components/Footer';
 import EbookCard from '@/components/EbookCard';
 import { DEMO_PRODUCTS } from '@/lib/demo';
-import logoImage from '@/components/logo.png.jpeg';
+import logoImage from '@/components/logo.jpeg';
 
 export default function SiteHomePage() {
   return (
@@ -37,10 +37,10 @@ export default function SiteHomePage() {
             {/* Left Side: Brand Name & Introduction */}
             <div className="flex-1">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
-                INKDIA
+                DreamEDA
               </h2>
               <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                INKDIA is a premier digital publishing platform where we deliver high-quality eBooks, quick guides, and creative printables for modern readers and learners. Our goal is to make your learning experience fast, affordable, and accessible. Every digital product is available as an instant secure download so you can start reading immediately without any wait. We place quality and user satisfaction above everything else.
+                DreamEDA is a premier digital publishing platform where we deliver high-quality eBooks, quick guides, and creative printables for modern readers and learners. Our goal is to make your learning experience fast, affordable, and accessible. Every digital product is available as an instant secure download so you can start reading immediately without any wait. We place quality and user satisfaction above everything else.
               </p>
             </div>
 
@@ -49,7 +49,7 @@ export default function SiteHomePage() {
               <div className="w-44 h-44 bg-white border border-sky-200 rounded-3xl flex items-center justify-center shadow-sm p-2 overflow-hidden">
                 <img 
                   src={logoImage.src} 
-                  alt="INKDIA Logo" 
+                  alt="DreamEDA Logo" 
                   className="w-full h-full object-cover rounded-2xl"
                 />
               </div>
@@ -104,9 +104,9 @@ export default function SiteHomePage() {
             </div>
           </div>
 
-          {/* 3. Why Choose INKDIA Section */}
+          {/* 3. Why Choose DreamEDA Section */}
           <div className="pt-4 border-t border-sky-200">
-            <h3 className="text-xl font-bold text-sky-900 mb-4">Why Choose INKDIA</h3>
+            <h3 className="text-xl font-bold text-sky-900 mb-4">Why Choose DreamEDA</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-sm sm:text-base text-gray-700">
               <div className="bg-white/60 p-4 rounded-2xl border border-sky-100">
                 <strong className="text-gray-900 block mb-1">Verified Quality:</strong> Thorough quality checks conducted for every digital product.

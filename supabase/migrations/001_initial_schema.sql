@@ -1,4 +1,4 @@
--- INKDIA database schema. Run this ONCE in Supabase: SQL Editor > New query > paste > Run.
+-- DreamEDA database schema. Run this ONCE in Supabase: SQL Editor > New query > paste > Run.
 create extension if not exists pgcrypto;
 
 -- ───────── Admins ─────────
@@ -165,7 +165,7 @@ create policy "storage: admins manage ebook buckets" on storage.objects for all
 insert into public.categories (name, slug, sort_order) values ('General', 'general', 0) on conflict (slug) do nothing;
 
 insert into public.pages (slug, title, content) values
-('about', 'About INKDIA', E'DRAFT TEMPLATE: replace this text in Admin > Website Content.\n\nINKDIA is an online store for ebooks. Tell visitors who you are, why you write, and what readers can expect.'),
+('about', 'About DreamEDA', E'DRAFT TEMPLATE: replace this text in Admin > Website Content.\n\nDreamEDA is an online store for ebooks. Tell visitors who you are, why you write, and what readers can expect.'),
 ('contact', 'Contact Us', E'DRAFT TEMPLATE: replace this text in Admin > Website Content.\n\nAdd your support email address and how quickly you usually reply.'),
 ('privacy', 'Privacy Policy', E'DRAFT TEMPLATE, NOT LEGAL ADVICE. Review and complete before launching.\n\nExplain what customer information you collect (for example email address and order details), why, how long you keep it, who processes it (payment provider, email provider, hosting), and how customers can contact you about their data.'),
 ('terms', 'Terms and Conditions', E'DRAFT TEMPLATE, NOT LEGAL ADVICE. Review and complete before launching.\n\nExplain how ebooks may be used (personal use, no resharing), pricing in INR, delivery by download, and your business details once you have them.'),

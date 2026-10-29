@@ -21,7 +21,7 @@ export default function Login() {
   }
   return (
     <main className="mx-auto mt-20 max-w-sm px-4">
-      <h1 className="text-3xl">INKDIA admin</h1>
+      <h1 className="text-3xl">DreamEDA admin</h1>
       {notAdmin && <p className="mt-4 rounded-md bg-red-100 p-3 text-sm text-red-900" role="alert">This account is signed in but is not an administrator. See the setup guide, step "Make yourself an admin".</p>}
       <form onSubmit={submit} className="mt-6 space-y-4">
         <div><label className="label" htmlFor="e">Email</label><input id="e" type="email" required className="input" value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="username" /></div>

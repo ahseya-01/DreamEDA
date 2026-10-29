@@ -1,5 +1,5 @@
 // The cart only remembers product IDs in this browser. Prices are always looked up on the server.
-const KEY = 'inkdia_cart';
+const KEY = 'DreamEDA_cart';
 export const getCart = (): string[] => {
   try { const v = JSON.parse(localStorage.getItem(KEY) || '[]'); return Array.isArray(v) ? v.filter((x) => typeof x === 'string') : []; } catch { return []; }
 };

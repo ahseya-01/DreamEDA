@@ -3,7 +3,7 @@ import { sha256 } from '@/lib/orders';
 import { rateLimit, clientIp } from '@/lib/ratelimit';
 
 const page = (msg: string, status: number) =>
-  new Response(`<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Download</title><body style="font-family:system-ui;max-width:32rem;margin:4rem auto;padding:0 1rem"><h1>Download unavailable</h1><p>${msg}</p><p><a href="/">Back to INKDIA</a></p>`, { status, headers: { 'Content-Type': 'text/html; charset=utf-8' } });
+  new Response(`<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Download</title><body style="font-family:system-ui;max-width:32rem;margin:4rem auto;padding:0 1rem"><h1>Download unavailable</h1><p>${msg}</p><p><a href="/">Back to DreamEDA</a></p>`, { status, headers: { 'Content-Type': 'text/html; charset=utf-8' } });
 
 export async function GET(req: Request, { params }: { params: { token: string } }) {
   if (!rateLimit(`dl:${clientIp(req)}`, 30, 60_000)) return page('Too many requests. Please wait a minute and try again.', 429);

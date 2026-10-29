@@ -13,7 +13,7 @@ export default async function ThankYou({ searchParams }: { searchParams: { order
     const { data } = await serviceClient().from('orders').select('id, order_number, payment_status, is_demo, access_key_hash, order_items(id, title_snapshot)').eq('order_number', num).maybeSingle();
     if (data && keyMatches(key, data.access_key_hash)) order = data;
   }
-  if (!order) return (<div className="container max-w-xl py-20 text-center"><h1 className="text-3xl">Order not found</h1><p className="mt-2 text-ink/70">This link is not valid. If you paid, check your email or contact us with your order number.</p><Link href="/" className="btn btn-primary mt-6">Back to INKDIA</Link></div>);
+  if (!order) return (<div className="container max-w-xl py-20 text-center"><h1 className="text-3xl">Order not found</h1><p className="mt-2 text-ink/70">This link is not valid. If you paid, check your email or contact us with your order number.</p><Link href="/" className="btn btn-primary mt-6">Back to DreamEDA</Link></div>);
   if (order.payment_status !== 'paid' || order.is_demo) return (<div className="container max-w-xl py-20 text-center"><h1 className="text-3xl">Payment not confirmed yet</h1><p className="mt-2 text-ink/70">Order {order.order_number} has not been confirmed as paid. Confirmation can take a minute. Refresh this page shortly. No download is available until payment is confirmed.</p></div>);
 
   const links = await Promise.all(order.order_items.map(async (i: any) => ({ title: i.title_snapshot, token: await issueDownloadToken(i.id, 24) })));

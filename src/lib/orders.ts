@@ -72,7 +72,7 @@ async function sendOrderEmail(order: { email: string; order_number: string; orde
     method: 'POST',
     headers: { Authorization: `Bearer ${process.env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      from: process.env.EMAIL_FROM, to: [order.email], subject: `Your INKDIA order ${order.order_number}`,
+      from: process.env.EMAIL_FROM, to: [order.email], subject: `Your DreamEDA order ${order.order_number}`,
       html: `<p>Thank you for your order <strong>${order.order_number}</strong>.</p><ul>${lines.join('')}</ul><p>These download links expire in 24 hours. If a link expires, open your order confirmation page again or contact us.</p>`,
     }),
   });

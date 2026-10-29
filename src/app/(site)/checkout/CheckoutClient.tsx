@@ -30,7 +30,7 @@ export default function CheckoutClient({ accepting, mode }: { accepting: boolean
         const s = document.createElement('script'); s.src = 'https://checkout.razorpay.com/v1/checkout.js'; s.onload = () => ok(); s.onerror = () => bad(new Error('Could not load the payment window.')); document.body.appendChild(s);
       });
       const rz = new window.Razorpay({
-        key: o.keyId, amount: o.amount, currency: 'INR', name: 'INKDIA', order_id: o.razorpayOrderId, prefill: { email },
+        key: o.keyId, amount: o.amount, currency: 'INR', name: 'DreamEDA', order_id: o.razorpayOrderId, prefill: { email },
         handler: async (r: any) => {
           const v = await fetch('/api/payments/verify', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...r, orderNumber: o.orderNumber, accessKey: o.accessKey }) });
           const j = await v.json();

@@ -1,4 +1,4 @@
-# INKDIA: ebook store
+# DreamEDA: ebook store
 
 A website for selling ebooks, with an admin dashboard so you can manage everything without editing code.
 
@@ -27,7 +27,7 @@ A website for selling ebooks, with an admin dashboard so you can manage everythi
 | GitHub | holds your code for deployment | free for private projects |
 | Razorpay | payments (later) | no setup cost that I can promise; they charge per transaction. Check their current terms and eligibility |
 | Resend | emails (later) | free tier with limits; needs a domain you own for proper sending |
-| Domain name | your own address, e.g. inkdia.com | paid yearly; you do not need one to start (you get a free `.vercel.app` address) |
+| Domain name | your own address, e.g. DreamEDA.com | paid yearly; you do not need one to start (you get a free `.vercel.app` address) |
 
 ---
 
@@ -36,7 +36,7 @@ A website for selling ebooks, with an admin dashboard so you can manage everythi
 ## Part A. Run it on your computer
 
 1. Install **Node.js** (the "LTS" version) from nodejs.org.
-2. Create a free account at **supabase.com**, click *New project*, choose a name (INKDIA), a strong database password (save it somewhere safe) and the region nearest you. Wait until it finishes.
+2. Create a free account at **supabase.com**, click *New project*, choose a name (DreamEDA), a strong database password (save it somewhere safe) and the region nearest you. Wait until it finishes.
 3. In Supabase, open **SQL Editor > New query**, paste the whole contents of `supabase/migrations/001_initial_schema.sql`, click **Run**. It should say success.
 4. In Supabase open **Authentication > Users > Add user > Create new user**. Enter your email and a strong password, tick "Auto Confirm User". This will be your admin login.
 5. Back in **SQL Editor**, open `supabase/make-admin.sql`, replace `YOUR-EMAIL@example.com` with the email you just used, and **Run**. This makes that account an administrator.

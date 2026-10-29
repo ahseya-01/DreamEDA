@@ -14,7 +14,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   return (
     <div className="min-h-screen md:grid md:grid-cols-[14rem_1fr]">
       <aside className="border-b border-ink/10 bg-white p-4 md:border-b-0 md:border-r">
-        <p className="font-display text-xl font-semibold tracking-[0.2em]">INKDIA</p>
+        <p className="font-display text-xl font-semibold tracking-[0.2em]">DreamEDA</p>
         <p className="text-xs text-ink/70">Admin dashboard</p>
         <nav className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm font-medium md:block md:space-y-2" aria-label="Admin">
           {nav.map(([h, l]) => <Link key={h} href={h} className="block hover:underline">{l}</Link>)}

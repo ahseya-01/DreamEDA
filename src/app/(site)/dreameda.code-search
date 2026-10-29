@@ -1,0 +1,143 @@
+# Query: inkdia
+# ContextLines: 1
+
+36 results - 17 files
+
+package.json:
+  1  {
+  2:   "name": "inkdia",
+  3    "version": "0.1.0",
+
+README.md:
+   1: # INKDIA: ebook store
+   2  
+
+  29  | Resend | emails (later) | free tier with limits; needs a domain you own for proper sending |
+  30: | Domain name | your own address, e.g. inkdia.com | paid yearly; you do not need one to start (you get a free `.vercel.app` address) |
+  31  
+
+  38  1. Install **Node.js** (the "LTS" version) from nodejs.org.
+  39: 2. Create a free account at **supabase.com**, click *New project*, choose a name (INKDIA), a strong database password (save it somewhere safe) and the region nearest you. Wait until it finishes.
+  40  3. In Supabase, open **SQL Editor > New query**, paste the whole contents of `supabase/migrations/001_initial_schema.sql`, click **Run**. It should say success.
+
+src\app\(site)\page.tsx:
+   39                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+   40:                 INKDIA
+   41                </h2>
+   42                <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+   43:                 INKDIA is a premier digital publishing platform where we deliver high-quality eBooks, quick guides, and creative printables for modern readers and learners. Our goal is to make your learning experience fast, affordable, and accessible. Every digital product is available as an instant secure download so you can start reading immediately without any wait. We place quality and user satisfaction above everything else.
+   44                </p>
+
+   51                    src={logoImage.src} 
+   52:                   alt="INKDIA Logo" 
+   53                    className="w-full h-full object-cover rounded-2xl"
+
+  106  
+  107:           {/* 3. Why Choose INKDIA Section */}
+  108            <div className="pt-4 border-t border-sky-200">
+  109:             <h3 className="text-xl font-bold text-sky-900 mb-4">Why Choose INKDIA</h3>
+  110              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-sm sm:text-base text-gray-700">
+
+src\app\(site)\checkout\CheckoutClient.tsx:
+  32        const rz = new window.Razorpay({
+  33:         key: o.keyId, amount: o.amount, currency: 'INR', name: 'INKDIA', order_id: o.razorpayOrderId, prefill: { email },
+  34          handler: async (r: any) => {
+
+src\app\(site)\thank-you\page.tsx:
+  15    }
+  16:   if (!order) return (<div className="container max-w-xl py-20 text-center"><h1 className="text-3xl">Order not found</h1><p className="mt-2 text-ink/70">This link is not valid. If you paid, check your email or contact us with your order number.</p><Link href="/" className="btn btn-primary mt-6">Back to INKDIA</Link></div>);
+  17    if (order.payment_status !== 'paid' || order.is_demo) return (<div className="container max-w-xl py-20 text-center"><h1 className="text-3xl">Payment not confirmed yet</h1><p className="mt-2 text-ink/70">Order {order.order_number} has not been confirmed as paid. Confirmation can take a minute. Refresh this page shortly. No download is available until payment is confirmed.</p></div>);
+
+src\app\admin\(panel)\layout.tsx:
+  16        <aside className="border-b border-ink/10 bg-white p-4 md:border-b-0 md:border-r">
+  17:         <p className="font-display text-xl font-semibold tracking-[0.2em]">INKDIA</p>
+  18          <p className="text-xs text-ink/70">Admin dashboard</p>
+
+src\app\admin\(panel)\email\page.tsx:
+  15            <li>Create an API key and add it to your hosting settings as <code>RESEND_API_KEY</code>.</li>
+  16:           <li>Set <code>EMAIL_FROM</code> to an address on your verified domain, for example <code>INKDIA &lt;orders@yourdomain.com&gt;</code>.</li>
+  17            <li>Redeploy, then make a test purchase and check the email arrives.</li>
+
+src\app\admin\(panel)\payments\page.tsx:
+  42          <p><strong>Not completed.</strong> Your bank account is linked to the payment provider, not to this website. Complete it in Razorpay’s own onboarding. It will ask for business and bank details. You never enter them here.</p>
+  43:         <p>Never share bank passwords, card PINs or OTPs with anyone, including this website. INKDIA never asks for them and does not store financial account details.</p>
+  44        </section>
+
+src\app\admin\login\page.tsx:
+  23      <main className="mx-auto mt-20 max-w-sm px-4">
+  24:       <h1 className="text-3xl">INKDIA admin</h1>
+  25        {notAdmin && <p className="mt-4 rounded-md bg-red-100 p-3 text-sm text-red-900" role="alert">This account is signed in but is not an administrator. See the setup guide, step "Make yourself an admin".</p>}
+
+src\app\api\download\[token]\route.ts:
+  5  const page = (msg: string, status: number) =>
+  6:   new Response(`<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Download</title><body style="font-family:system-ui;max-width:32rem;margin:4rem auto;padding:0 1rem"><h1>Download unavailable</h1><p>${msg}</p><p><a href="/">Back to INKDIA</a></p>`, { status, headers: { 'Content-Type': 'text/html; charset=utf-8' } });
+  7  
+
+src\components\cart-store.ts:
+  1  // The cart only remembers product IDs in this browser. Prices are always looked up on the server.
+  2: const KEY = 'inkdia_cart';
+  3  export const getCart = (): string[] => {
+
+src\components\Logo.tsx:
+  6      <div className="flex items-center gap-2">
+  7:       <img src={logoImage.src} alt="INKDIA Logo" className="h-9 w-auto object-contain" />
+  8:       <span className="font-bold text-xl text-black">INKDIA</span>
+  9      </div>
+
+src\components\admin\BrandingForm.tsx:
+  21        <div className="space-y-6">
+  22:         <p className="rounded-md border border-ink/20 bg-white p-3 text-sm">Until you upload a logo, a plain text wordmark “INKDIA” is shown. It is a temporary placeholder, not a finished logo. The website name is always INKDIA.</p>
+  23          <FileUpload label="Logo (for light backgrounds)" name="logo_light" bucket="public-assets" folder="branding" accept="image/*" initial={brand.logo_light} onPath={setLogo} hint="PNG, SVG or WebP. Transparent background works best." />
+  24          <FileUpload label="Logo (for dark backgrounds, optional)" name="logo_dark" bucket="public-assets" folder="branding" accept="image/*" initial={brand.logo_dark} onPath={setLogoDark} hint="Used in the footer. If empty, the light logo is used." />
+  25:         <label className="flex items-center gap-2 text-sm"><input type="checkbox" name="show_name_with_logo" checked={withName} onChange={(e) => setWithName(e.target.checked)} /> Also show the text “INKDIA” next to my logo</label>
+  26          <FileUpload label="Favicon (the small icon in the browser tab)" name="favicon" bucket="public-assets" folder="branding" accept="image/png,image/x-icon,image/svg+xml" initial={brand.favicon} hint="A square PNG, at least 64×64 pixels." />
+
+  37              {logo ? <img src={publicUrl(logo)} alt="" className="h-7 w-auto" /> : null}
+  38:             {(!logo || withName) && <span className="font-display text-lg font-semibold tracking-[0.2em]">INKDIA</span>}
+  39            </div>
+
+  45            <div className="p-4 text-sm">Sample page text on your chosen background.</div>
+  46:           <div className="p-3" style={{ background: c.brand }}>{logoDark || logo ? <img src={publicUrl(logoDark || logo)} alt="" className="h-6 w-auto" /> : <span className="font-display text-white tracking-[0.2em]">INKDIA</span>}</div>
+  47          </div>
+
+src\lib\demo.ts:
+  5  const base = {
+  6:   full_description: 'This is a demo product so you can preview the INKDIA design. It is not a real ebook.',
+  7    category_id: null, categories: { name: 'Demo', slug: 'demo' }, language: 'English', page_count: null, file_format: 'PDF',
+
+src\lib\orders.ts:
+  74      body: JSON.stringify({
+  75:       from: process.env.EMAIL_FROM, to: [order.email], subject: `Your INKDIA order ${order.order_number}`,
+  76        html: `<p>Thank you for your order <strong>${order.order_number}</strong>.</p><ul>${lines.join('')}</ul><p>These download links expire in 24 hours. If a link expires, open your order confirmation page again or contact us.</p>`,
+
+src\lib\settings.ts:
+   5    hero: 'Hero banner', categories: 'Category list', featured: 'Featured ebooks', bestsellers: 'Bestsellers (optional)',
+   6:   all: 'All ebooks', recent: 'Recently added', promo: 'Promotional banner', about: 'About INKDIA', contact: 'Contact',
+   7  };
+   8  
+   9: // Every value here can be changed in the admin dashboard. The official brand name stays INKDIA.
+  10  export const DEFAULTS = {
+  11    brand: {
+  12:     name: 'INKDIA',
+  13      tagline: 'Ebooks to read and keep',            // placeholder: edit in Logo & Branding
+  14:     description: 'INKDIA is an online store for ebooks, delivered as secure downloads.',
+  15      logo_light: '', logo_dark: '', favicon: '', banner: '',
+
+  25      hero_title: 'Ebooks you can read today and keep for good',
+  26:     hero_subtitle: 'Browse the INKDIA library and download your ebook right after purchase.',
+  27      promo_title: 'New ebooks are added regularly',
+  28      promo_text: 'Browse the catalog to see what is new.',
+  29:     about_text: 'INKDIA is an independent ebook store. Edit this text in Admin > Website Content.',
+  30      contact_text: 'Questions about an ebook or an order? Write to us.',
+
+  43    } catch { /* use defaults */ }
+  44:   out.brand.name = 'INKDIA';
+  45    return out;
+
+supabase\migrations\001_initial_schema.sql:
+    1: -- INKDIA database schema. Run this ONCE in Supabase: SQL Editor > New query > paste > Run.
+    2  create extension if not exists pgcrypto;
+
+  167  insert into public.pages (slug, title, content) values
+  168: ('about', 'About INKDIA', E'DRAFT TEMPLATE: replace this text in Admin > Website Content.\n\nINKDIA is an online store for ebooks. Tell visitors who you are, why you write, and what readers can expect.'),
+  169  ('contact', 'Contact Us', E'DRAFT TEMPLATE: replace this text in Admin > Website Content.\n\nAdd your support email address and how quickly you usually reply.'),
