@@ -15,7 +15,7 @@ export default function RecentEbooks() {
   return (
     <section className="w-full py-8">
       {/* Bada Rectangular Box (Light Blue Shade) */}
-      <div className="bg-[#f0f4f8] rounded-3xl p-6 sm:p-8">
+      <div className="bg-sky-50 border border-sky-100 rounded-3xl p-6 sm:p-8">
         <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">Recently Uploaded Ebooks</h2>
 
         {/* 4 White Boxes Grid (Desktop par 4 ek row mein, Mobile par 2x2 grid) */}
