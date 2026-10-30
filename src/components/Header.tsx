@@ -69,9 +69,9 @@ export default function Header() {
             </button>
             <Link href="/all-ebooks" onClick={() => setIsMenuOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">All Ebooks</Link>
             <button onClick={() => { const el = document.getElementById("About"); if(el) el.scrollIntoView({ behavior: "smooth" }); setIsMenuOpen(false); }} className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">About</button>
-            <Link href="/contact" onClick={() => setIsMenuOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contact</Link>
+            <Link href="/contact" onClick={() => setIsMenuOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contact Us</Link>
             <Link href="/terms" onClick={() => setIsMenuOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Terms & Conditions</Link>
-            <Link href="/help" onClick={() => setIsMenuOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Help</Link>
+            <Link href="/help" onClick={() => setIsMenuOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Help & Feedback</Link>
             <Link href="/privacy" onClick={() => setIsMenuOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Privacy Policy</Link>
           </div>
         )}
