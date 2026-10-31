@@ -14,11 +14,15 @@ export default async function Footer() {
           {store.footer_text && <p className="text-sm text-white/80">{store.footer_text}</p>}
         </div>
         <nav aria-label="Legal and support" className="space-y-2 text-sm">
-          <p className="font-semibold">Support</p>
-          <Link className="block hover:underline" href="/p/contact">Contact us</Link>
-          <Link className="block hover:underline" href="/p/privacy">Privacy Policy</Link>
-          <Link className="block hover:underline" href="/p/terms">Terms and Conditions</Link>
-          <Link className="block hover:underline" href="/p/refund">Digital Product Refund Policy</Link>
+          <Link href="/support" className="block font-semibold hover:underline">
+  Support
+</Link>
+          <Link className="block hover:underline" href="/contact">Contact Us</Link>
+         <Link className="block hover:underline" href="/privacy">Privacy Policy</Link>
+         <Link className="block hover:underline" href="/terms">Terms and Conditions</Link>
+          <Link className="block hover:underline" href="/refund">
+  Digital Product Refund Policy
+</Link>
         </nav>
         <div className="space-y-2 text-sm">
           {store.contact_email && <p><span className="font-semibold">Email: </span><a className="underline" href={`mailto:${store.contact_email}`}>{store.contact_email}</a></p>}
