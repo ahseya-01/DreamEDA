@@ -85,6 +85,141 @@ export default function SiteHomePage() {
           </div>
         </div>
 
+        {/* Our Motive Section */}
+        <div className="bg-sky-50/50 border border-sky-100 rounded-3xl p-8 sm:p-12 w-full max-w-full">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Our Motive</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Instant Accessibility</h3>
+              <p className="text-sm text-gray-600">Providing digital resources to learners instantly without any wait.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Affordable Learning</h3>
+              <p className="text-sm text-gray-600">Delivering high-quality content matching every student's budget.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Skill Enhancement</h3>
+              <p className="text-sm text-gray-600">Crafting practical guides and printables to boost data productivity.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Continuous Growth</h3>
+              <p className="text-sm text-gray-600">Constantly updating content on trending topics for modern learners.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 text-base mb-1">User Trust</h3>
+              <p className="text-sm text-gray-600">Building a reliable digital brand with customer satisfaction as top priority.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* What We Deliver Section */}
+        <div className="bg-sky-50/50 border border-sky-100 rounded-3xl p-8 sm:p-12 w-full max-w-full">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">What We Deliver</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Curated eBooks</h3>
+              <p className="text-sm text-gray-600">In-depth digital books on science, productivity, and self-growth.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Quick Learning Guides</h3>
+              <p className="text-sm text-gray-600">Concise guides delivering maximum knowledge in minimal time.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Creative Printables</h3>
+              <p className="text-sm text-gray-600">Engaging inspiring books and activity sheets for kids and adults.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Instant Downloads</h3>
+              <p className="text-sm text-gray-600">Get immediate file access right after secure checkout.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Print Ready Formats</h3>
+              <p className="text-sm text-gray-600">High-resolution files optimized for both digital reading and home printing.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Why Choose DreamEDA Section */}
+        <div className="bg-sky-50/50 border border-sky-100 rounded-3xl p-8 sm:p-12 w-full max-w-full">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Why Choose DreamEDA</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Verified Quality</h3>
+              <p className="text-sm text-gray-600">Thorough quality checks conducted for every single product.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Time Saving</h3>
+              <p className="text-sm text-gray-600">Straight to the point content designed to save valuable time.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Zero Hidden Charges</h3>
+              <p className="text-sm text-gray-600">Transparent pricing with what you see being what you get.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Easy Navigation</h3>
+              <p className="text-sm text-gray-600">Clean website layout to help you find less apps with zero friction.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Dedicated Support</h3>
+              <p className="text-sm text-gray-600">Quick assistance for all verified customer queries.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Smart Learning Benefits Section */}
+        <div className="bg-sky-50/50 border border-sky-100 rounded-3xl p-8 sm:p-12 w-full max-w-full">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Smart Learning Benefits</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Self-Paced Reading</h3>
+              <p className="text-sm text-gray-600">Read anytime, anywhere on your smartphone or laptop.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Pocket Friendly</h3>
+              <p className="text-sm text-gray-600">Gain superior knowledge at marginal cost without breaking your bank.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Interactive Design</h3>
+              <p className="text-sm text-gray-600">Printable and guides that make learning fun and engaging.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Instant Application</h3>
+              <p className="text-sm text-gray-600">Easily apply learned concepts directly into your daily life.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Clarity & Focus</h3>
+              <p className="text-sm text-gray-600">Clean, structured content delivered without any distractions.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Our Future Vision Section */}
+        <div className="bg-sky-50/50 border border-sky-100 rounded-3xl p-8 sm:p-12 w-full max-w-full">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Our Future Vision</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Wide Catalog</h3>
+              <p className="text-sm text-gray-600">Expanding with new categories and subjects in the future.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Community Building</h3>
+              <p className="text-sm text-gray-600">Creating a strong digital community of learners and readers.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Interactive Tools</h3>
+              <p className="text-sm text-gray-600">Introducing new digital features to make learning easier faster.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Exclusive Discounts</h3>
+              <p className="text-sm text-gray-600">Special offers and perks for regular customers and subscribers.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Global Reach</h3>
+              <p className="text-sm text-gray-600">Reaching and empowering learners across the globe with our digital products.</p>
+            </div>
+          </div>
+        </div>
+
       </main>
 
       {/* POPUP MODAL (Exact design matching your image) */}
